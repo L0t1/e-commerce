@@ -44,6 +44,9 @@ Route::get('/vendor/dashboard',[VendorController::class,'VendorDashboard'])->nam
 Route::get('/vendor/logout', [VendorController::class, 'VendorDestroy'])->name('vendor.logout');
 Route::get('/vendor/profile', [VendorController::class, 'VendorProfile'])->name('vendor.profile');
 Route::post('/vendor/profile/store', [VendorController::class, 'VendorProfileStore'])->name('vendor.profile.store');
+Route::get('/vendor/change/password', [VendorController::class, 'VendorChangePassword'])->name('vendor.change.password');
+Route::post('/vendor/update/password', [VendorController::class, 'VendorUpdatePassword'])->name('vendor.update.password');
+
 
  });
 
