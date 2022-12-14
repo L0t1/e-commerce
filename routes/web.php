@@ -24,12 +24,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
 require __DIR__.'/auth.php';
 
 
@@ -48,6 +42,8 @@ Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassw
 Route::middleware(['auth','role:vendor'])->group(function(){
 Route::get('/vendor/dashboard',[VendorController::class,'VendorDashboard'])->name('vendor.dashboard');
 Route::get('/vendor/logout', [VendorController::class, 'VendorDestroy'])->name('vendor.logout');
+Route::get('/vendor/profile', [VendorController::class, 'VendorProfile'])->name('vendor.profile');
+Route::post('/vendor/profile/store', [VendorController::class, 'VendorProfileStore'])->name('vendor.profile.store');
 
  });
 
