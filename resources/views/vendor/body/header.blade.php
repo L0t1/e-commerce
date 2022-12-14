@@ -347,7 +347,7 @@ $vendorData = App\Models\User::find($id);
     </li>
     <li><a class="dropdown-item" href="{{ route('vendor.change.password') }}"><i class="bx bx-cog"></i><span>Change Password</span></a>
     </li>
-    <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+    <li><a class="dropdown-item" href="/vendor/dashboard"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
     </li>
     <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
     </li>
