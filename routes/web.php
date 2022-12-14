@@ -26,8 +26,10 @@ Route::get('/dashboard', [UserController::class, 'UserDashboard'])->name('dashbo
 
 Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
 
+Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
 
-}); // Gorup Milldeware End
+
+}); // Group Milldeware End
 
 
 // Route::get('/dashboard', function () {
